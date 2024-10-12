@@ -6,7 +6,14 @@ settings:
 
 importers:
 
-  .: {}
+  .:
+    devDependencies:
+      prettier:
+        specifier: ^3.0.0
+        version: 3.3.3
+      typescript:
+        specifier: ^5.6.3
+        version: 5.6.3
 
   apps/api:
     dependencies:
@@ -19,12 +26,18 @@ importers:
       '@nestjs/platform-express':
         specifier: ^10.0.0
         version: 10.4.4(@nestjs/common@10.4.4(reflect-metadata@0.2.2)(rxjs@7.8.1))(@nestjs/core@10.4.4)
+      '@parking-application-monorepo/sample-lib':
+        specifier: link:../../libs/sample-lib
+        version: link:../../libs/sample-lib
       reflect-metadata:
         specifier: ^0.2.0
         version: 0.2.2
       rxjs:
         specifier: ^7.8.1
         version: 7.8.1
+      sample-lib:
+        specifier: link:../../libs/sample-libs/@parking-application-monorepo/sample-lib
+        version: link:../../libs/sample-libs/@parking-application-monorepo/sample-lib
     devDependencies:
       '@nestjs/cli':
         specifier: ^10.0.0
@@ -92,6 +105,9 @@ importers:
 
   apps/web:
     dependencies:
+      '@parking-application-monorepo/sample-lib':
+        specifier: link:../../libs/sample-lib
+        version: link:../../libs/sample-lib
       next:
         specifier: 14.2.15
         version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -101,6 +117,9 @@ importers:
       react-dom:
         specifier: ^18
         version: 18.3.1(react@18.3.1)
+      sample-lib:
+        specifier: link:/libs/@parking-application-monorepo/sample-lib
+        version: link:../../../../../../../libs/@parking-application-monorepo/sample-lib
     devDependencies:
       '@types/node':
         specifier: ^20
@@ -126,6 +145,8 @@ importers:
       typescript:
         specifier: ^5
         version: 5.6.3
+
+  libs/sample-lib: {}
 
 packages:
 

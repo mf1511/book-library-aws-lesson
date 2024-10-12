@@ -1,5 +1,5 @@
 {
-  "name": "@parking-app/api",
+  "name": "@parking-application-monorepo/api",
   "version": "0.0.1",
   "description": "",
   "author": "",
@@ -9,7 +9,7 @@
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
-    "start:dev": "nest start --watch",
+    "dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
@@ -23,8 +23,10 @@
     "@nestjs/common": "^10.0.0",
     "@nestjs/core": "^10.0.0",
     "@nestjs/platform-express": "^10.0.0",
+    "@parking-application-monorepo/sample-lib": "link:../../libs/sample-lib",
     "reflect-metadata": "^0.2.0",
-    "rxjs": "^7.8.1"
+    "rxjs": "^7.8.1",
+    "sample-lib": "link:../../libs/sample-libs/@parking-application-monorepo/sample-lib"
   },
   "devDependencies": {
     "@nestjs/cli": "^10.0.0",

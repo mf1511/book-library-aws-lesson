@@ -3,8 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "private": true,
-  "scripts": {},
+  "scripts": {
+    "format": "prettier \"{apps,libs,test}/**/*.{ts,tsx,js,jsx,json}\" --ignore-path .gitignore",
+    "format:check": "pnpm format --check",
+    "format:write": "pnpm format --write"
+  },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^3.0.0",
+    "typescript": "^5.6.3"
+  }
 }
