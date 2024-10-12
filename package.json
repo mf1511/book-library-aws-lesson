@@ -6,7 +6,9 @@
   "scripts": {
     "format": "prettier \"{apps,libs,test}/**/*.{ts,tsx,js,jsx,json}\" --ignore-path .gitignore",
     "format:check": "pnpm format --check",
-    "format:write": "pnpm format --write"
+    "format:write": "pnpm format --write",
+    "tsc": "pnpm --parallel -r run tsc",
+    "lint": "pnpm --parallel -r run eslint"
   },
   "keywords": [],
   "author": "",
